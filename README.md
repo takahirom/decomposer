@@ -23,7 +23,7 @@ DecomposerPlugin: decomposed in /Users/takahirom/git/.../uicomponent-compose/bui
 
 ## Now, you can check the Java code
 
-```
+```java
    @Composable
    private static final void AudioControlButton(final Modifier modifier, final boolean isVisible, final boolean isPlayingPodcast, Composer $composer, final int $changed) {
 ...

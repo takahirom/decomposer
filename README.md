@@ -37,3 +37,8 @@ DecomposerPlugin: decomposed in /Users/takahirom/git/.../uicomponent-compose/bui
             $composer.startReplaceableGroup(445067139);
 ...
 ```
+
+
+## Credit
+This plugin uses Fernflower
+https://github.com/JetBrains/intellij-community/tree/4becae3818835d6105dbcf6c55ece50846395290/plugins/java-decompiler/engine

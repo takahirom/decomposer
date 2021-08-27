@@ -3,16 +3,6 @@ Gradle Plugin that allows you to decompile bytecode compiled with Jetpack Compos
 
 # How to use
 
-## Apply plugin
-
-```kotlin
-plugins {
-    id 'com.android.library'
-    id 'kotlin-android'
-    ...
-    id "com.github.takahirom.decomposer"
-}
-```
 
 ## Run build
 
@@ -36,6 +26,57 @@ DecomposerPlugin: decomposed in /Users/takahirom/git/.../uicomponent-compose/bui
          if (isPlayingPodcast) {
             $composer.startReplaceableGroup(445067139);
 ...
+```
+
+
+## Download
+
+If you are using pluginManagement in settings.gradle.
+
+settings.gradle
+
+```kotlin
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        ....
+        maven { url 'https://jitpack.io' }
+    }
+    ...
+    resolutionStrategy {
+        eachPlugin {
+            if(requested.id.toString() == "com.github.takahirom.decomposer"){
+                useModule("com.github.takahirom:decomposer:bc9f8f5d43")
+            }
+        }
+    }
+```
+
+
+```kotlin
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    ...
+    id "com.github.takahirom.decomposer"
+}
+```
+
+If you use buildscript (not checked) 
+
+```kotlin
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url 'https://jitpack.io'
+        }
+    }
+    dependencies {
+        classpath 'com.github.takahirom:decomposer:bc9f8f5d43'
+    }
+}
+apply plugin: 'com.github.takahirom.decomposer'
 ```
 
 

@@ -16,11 +16,17 @@ java {
     targetCompatibility = JavaVersion.VERSION_1_7
 }
 
-
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.21")
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 }
+
+tasks.jar {
+    from(configurations.compileClasspath.get().filter{
+        it.path.contains("fernflower.jar")
+    }.map { if (it.isDirectory()) it else zipTree(it) })
+}
+
 
 gradlePlugin {
     plugins {

@@ -46,7 +46,7 @@ pluginManagement {
     resolutionStrategy {
         eachPlugin {
             if(requested.id.toString() == "com.github.takahirom.decomposer"){
-                useModule("com.github.takahirom:decomposer:bc9f8f5d43")
+                useModule("com.github.takahirom:decomposer:main-SNAPSHOT")
             }
         }
     }
@@ -73,7 +73,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.github.takahirom:decomposer:bc9f8f5d43'
+        classpath 'com.github.takahirom:decomposer:main-SNAPSHOT'
     }
 }
 apply plugin: 'com.github.takahirom.decomposer'

@@ -2,6 +2,7 @@ plugins {
     `kotlin-dsl`
     java
     id("java-gradle-plugin")
+    id("maven")
 }
 
 repositories {

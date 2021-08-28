@@ -11,7 +11,7 @@ Gradle Plugin that allows you to decompile bytecode compiled with Jetpack Compos
 DecomposerPlugin: decomposed in /Users/takahirom/git/.../uicomponent-compose/build/decompile
 ```
 
-## Now, you can check the Java code
+## Now, you can check the Java code in `build/decompile`
 
 ```java
    @Composable

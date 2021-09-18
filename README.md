@@ -62,7 +62,7 @@ plugins {
 }
 ```
 
-If you use buildscript (not checked) 
+If you use buildscript
 
 ```kotlin
 buildscript {
